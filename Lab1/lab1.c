@@ -2,7 +2,7 @@
 //Professora: Silvana Rossetto
 //Laboratório 1
 
-//Nome: Eduardo Kota Otomo
+//Aluno: Eduardo Kota Otomo
 //DRE: 118147443
 //Data: 9 de setembro de 2022.
 
