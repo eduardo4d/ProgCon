@@ -16,7 +16,6 @@
 
 double vetor[TAMVETOR];
 
-
 typedef struct {
    int thread, nThreads; 
 } t_Args;
@@ -25,7 +24,6 @@ typedef struct {
 //função que a thread irá executar
 void * tarefa (void * arg){
     t_Args * args = (t_Args*) arg;
-
     int i;
 
     if (args->thread) {
@@ -53,7 +51,6 @@ void imprime() {
      printf(", %g", vetor[i]);
   }
   printf("]\n");
-
 }
 
 
@@ -100,4 +97,3 @@ int main(void) {
     pthread_exit(NULL);
     return 0;
 }
-
