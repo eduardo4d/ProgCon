@@ -97,7 +97,6 @@ int main(void) {
 
     printf("Thread principal terminou\n");
 
-    //devincula o término da main do término do programa
     pthread_exit(NULL);
     return 0;
 }
