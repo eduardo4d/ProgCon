@@ -25,7 +25,8 @@ int main(int argc, char* argv[]){
 
     int i, j; /*indices*/
 
-    double inicio, fim, delta;
+    double inicio, fim;
+    double delta[3];
 
     GET_TIME(inicio);
     /*leitura e avaliação de parâmetros de entrada*/
@@ -52,8 +53,8 @@ int main(int argc, char* argv[]){
         saida[i] =0;
     }
     GET_TIME(fim);
-    delta = fim - inicio;
-    printf("Tempo de inicialização: %.lf\n", delta);
+    delta[0] = fim - inicio;
+
 
     GET_TIME(inicio);
     /*multiplica matriz quadada pelo vetor*/
@@ -62,8 +63,7 @@ int main(int argc, char* argv[]){
             saida[i] += matriz[i*dim+j]*vetor[j];
     }
     GET_TIME(fim);
-    delta = fim - inicio;
-    printf("Tempo de processamento: %.lf\n", delta);
+    delta[1] = fim - inicio;
 
     GET_TIME(inicio);
     /*exibe resultado*/
@@ -87,8 +87,16 @@ int main(int argc, char* argv[]){
     free(vetor);
     free(saida);
     GET_TIME(fim);
-    delta = fim - inicio;
-    printf("Tempo de finalização: %.lf\n", delta);
+    delta[2] = fim - inicio;
+
+    printf("\nTempo de inicialização: %.lf\n", delta[0]);
+    printf("Tempo de processamento: %.lf\n", delta[1]);
+    printf("Tempo de finalização: %.lf\n", delta[2]);
+
+    printf("\nTempo de execução total: %.lf\n",
+        delta[0]+delta[1]+delta[2]);
 
     return 0;
+
+
 }
