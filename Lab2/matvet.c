@@ -2,6 +2,7 @@
  * Computação Concorrente - 2022.2 - UFRJ
  * Profa. Silvana Rossetto
  * Aluno: Eduardo Kota Otomo
+ * DRE: 118147443
  * Laboratório 2: Multiplicação de matriz quadrada por um vetor
  */
 
